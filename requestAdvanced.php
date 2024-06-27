@@ -20,13 +20,11 @@ $parameters = array(
 
 $response = postToZibal('request', $parameters);
 
-if ($response->result == 100)
-{
+if ($response->result == 100) {
     //save trackId into database if you want or do something else
     $startGateWayUrl = "https://gateway.zibal.ir/start/".$response->trackId;
     header('location: '.$startGateWayUrl);
-}
-else{
+} else {
     echo "result: ".$response->result."<br>";
     echo "message: ".$response->message;
 }

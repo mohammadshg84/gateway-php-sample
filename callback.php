@@ -2,7 +2,7 @@
 
 require 'functions.php';
 
-if($_GET['success']==1) {
+if ($_GET['success']==1) {
     echo "شناسه سفارش: ".$_GET['orderId']."<br>";
 
     //start verfication
@@ -22,7 +22,7 @@ if($_GET['success']==1) {
         echo "result: " . $response->result . "<br>";
         echo "message: " . $response->message;
     }
-}else{
+} else {
     echo "پرداخت با شکست مواجه شد.";
 }
 ?>
